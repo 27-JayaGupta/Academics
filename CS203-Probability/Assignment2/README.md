@@ -1,6 +1,6 @@
 ## Instructions to execute the program
 ```
-$ python3 200471_Q2.py
+$ python3 Q2_PythonCode.py
 ```
 
 ### Note:
