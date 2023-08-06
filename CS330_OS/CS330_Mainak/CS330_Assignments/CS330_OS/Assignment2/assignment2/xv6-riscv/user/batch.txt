@@ -1,0 +1,5 @@
+0
+40 testGetPA
+40 testGetPA
+90 sleep 2
+40 testGetPA
