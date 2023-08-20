@@ -1,0 +1,14 @@
+* Compile user_prog_1.c ($gcc -g -o user_prog_1 user_prog_1.c)and run it with sudo permission.
+* user_prog_1 process takes one argument which is the operation number.
+* Eg: 
+	$sudo 	./user_prog_1 	3 
+	means to perform operation number 3 (get process id of the parent process)
+
+* Note: If you don't want to use sudo permission while running the user program, you can change the permissions of /sys/kernel/cs614_sysfs/cs614_value
+	using chmod command. (Note that you have to do this every time after you insert the module using insmod).
+* Eg: 	
+	$chmod 0666 /sys/kernel/cs614_sysfs/cs614_value
+
+* Note: Assertion failure means test case failed
+
+

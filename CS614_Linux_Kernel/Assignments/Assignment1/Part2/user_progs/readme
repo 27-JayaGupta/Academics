@@ -1,0 +1,4 @@
+* 2 programs (user_prog_1.c and user_prog_2.c ) are provided.
+* Compile and run ./user_prog_1 as per the instructions given in part1/user_progs. This process sleeps for some time.
+* Compile and run ./user_prog_2 while ./user_prog_1.c sleeps. 
+* You should be able to see the correct value (corresponding the operation specified) for ./user_prog_1 and ./user_prog_2

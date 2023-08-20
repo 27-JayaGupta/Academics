@@ -1,0 +1,7 @@
+* multi1.c program tests the correctness of your NUM_THREADS functionality
+* multi2.c program tests the correctness of your NUM_FILES_OPEN functionality
+* multi3.c program tests the correctness of your STACK_SIZE functionality
+* These programs use pthread library. Hence, we need to pass -lpthread flag while compilling.
+	i.e. $gcc -g -o multi1 multi1.c -lpthread
+
+* Run these programs in manner as mentioned in part1

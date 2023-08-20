@@ -1,0 +1,39 @@
+from os.path import exists
+import os
+
+file_exists = exists("tc40.out")
+empty=(os.stat("tc40.out").st_size == 0)
+if(not file_exists or empty):
+    print("Failed")
+    exit()
+
+d = {"before":{"pmd":[],"pte":[]},"after":{"pmd":[],"pte":[]}}
+flag = 0 #1 before 2after
+with open("tc40.out","r") as f1:
+    for line in f1:
+        line = line.strip("\n")
+        if(line == "before compaction"):
+            flag = "before"
+        if(line == "after compaction"):
+            flag = "after"
+        if("pmd" in line):
+            line = line.split(",")
+            l1 = [x.lstrip() for x in line]
+            for i in l1:
+                loc = (i.split(":"))[0]
+                val = (i.split(":"))[1]
+                d[flag][loc].append(val)
+
+if(len(d["before"]["pmd"]) == 0 or len(d["after"]["pmd"]) == 0):
+    print("Failed")
+    exit()
+
+
+#result = all(x==y for x,y in zip(d["before"]["pmd"], d["after"]["pmd"]))
+result = (d["before"]["pmd"][0] ==  d["after"]["pmd"][0])
+if(result):
+    print("Passed")
+else:
+    print("Failed")
+
+
