@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>WebGL 3D Cube Drawing</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assignment2.js"></script>
+  </head>
+  <style>
+    .slidecontainer {
+      width: 100%; /* Width of the outside container */
+    }
+
+    /* The slider itself */
+    .slider {
+      -webkit-appearance: none;  /* Override default CSS styles */
+      appearance: none;
+      width: 30%; /* Full-width */
+      height: 25px; /* Specified height */
+      background: #d3d3d3; /* Grey background */
+      outline: none; /* Remove outline */
+      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+      transition: opacity .2s;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+      opacity: 1; /* Fully shown on mouse-over */
+    }
+      
+  </style>
+
+  <body onload="webGLStart();">
+    <canvas
+      id="assignment2"
+      style="border: none"
+      width="1500"
+      height="500"
+    ></canvas>
+  </body>
+  <br/>
+    <h1><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Per-Face Shading</b>
+    <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Gouraud Shading(Per-Vertex)</b>
+    <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Phong Shading(Per-Fragment)</b></h1>
+    <br/>
+
+    <h2>Control Light Position: <input type="range" min="-200" max="200" value="100" class="slider" id="myRange_X"></h2>
+    <br/>
+    <h2>Control Camera Zoom: <input type="range" min="-100" max="100" value="4"class="slider" id="zoom"></h2>
+    <br/>
+    <h2 hidden>Light_Y: <input  type="range" min="-200" max="200" value="100" class="slider" id="myRange_Y"></h2>
+    <br/>    
+    <h2 hidden>Light_Z: <input  type="range" min="-200" max="200" value="100"class="slider" id="myRange_Z"> </h2>
+</html>

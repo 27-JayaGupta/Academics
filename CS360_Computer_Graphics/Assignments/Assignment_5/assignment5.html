@@ -1,0 +1,54 @@
+<!-- FILEPATH: /C:/Users/jayag/OneDrive/Documents/Sem7/CS360_Computer_Graphics/Assignment_4/Assignment_4/assignment4.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ray Tracing</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="assignment5.js"></script>
+</head>
+
+<style>
+    .slidecontainer {
+        width: 400px; /* Width of the outside container */
+    }
+
+    /* The slider itself */
+    .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 30%; /* Full-width */
+        height: 25px; /* Specified height */
+        background: #d3d3d3; /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+      
+</style>
+  
+<body onload="webGLStart();">
+    <canvas id="assignment5" width="500" height="500"></canvas>
+    <br>
+    <br>
+    <b>Shading Mode:</b>
+    <br>
+    <br>
+    <button onclick="phong()">Phong </button>
+    <button onclick="phongShadow()">Phong+Shadow</button>
+    <button onclick="phongReflection()">Phong+Reflection</button>
+    <button onclick="phongShadowReflection()">Phong+Shadow+Reflection</button>
+    <br>
+    <br>
+    Move Light:  <input type="range" min="-50" max="50" step="1" value="0" class="slidecontainer" id="lightPos">
+    <br><br>
+    Bounce Limit: <input type="range" min="0" max="5" step="1" value="1" class="slidecontainer" id="bounceLimit">
+    <br><br>
+</body>
+</html>
